@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browser-based calculator for basic arithmetic operations.">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="intro">
+            <p class="eyebrow">LEVEL 2 · TASK 1</p>
+            <h1>Calculator</h1>
+            <p>Basic arithmetic with operator chaining, decimal support and division-by-zero handling.</p>
+        </section>
+
+        <section class="calculator" aria-label="Calculator">
+            <div class="screen">
+                <p id="expression" class="expression"></p>
+                <p id="current" class="current">0</p>
+                <p id="error" class="error" role="alert"></p>
+            </div>
+
+            <div class="keypad">
+                <button type="button" data-action="clear" class="key key-util">C</button>
+                <button type="button" data-action="backspace" class="key key-util">⌫</button>
+                <button type="button" data-operator="÷" class="key key-op">÷</button>
+                <button type="button" data-operator="×" class="key key-op">×</button>
+
+                <button type="button" data-number="7" class="key">7</button>
+                <button type="button" data-number="8" class="key">8</button>
+                <button type="button" data-number="9" class="key">9</button>
+                <button type="button" data-operator="−" class="key key-op">−</button>
+
+                <button type="button" data-number="4" class="key">4</button>
+                <button type="button" data-number="5" class="key">5</button>
+                <button type="button" data-number="6" class="key">6</button>
+                <button type="button" data-operator="+" class="key key-op">+</button>
+
+                <button type="button" data-number="1" class="key">1</button>
+                <button type="button" data-number="2" class="key">2</button>
+                <button type="button" data-number="3" class="key">3</button>
+                <button type="button" data-action="equals" class="key key-equals">=</button>
+
+                <button type="button" data-number="0" class="key key-zero">0</button>
+                <button type="button" data-decimal="." class="key">.</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
