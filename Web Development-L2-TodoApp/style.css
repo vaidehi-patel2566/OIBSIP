@@ -1,0 +1,225 @@
+:root {
+    --background: #0b0d18;
+    --surface: #15192c;
+    --surface-light: #1d233b;
+    --purple: #c4b5ff;
+    --purple-deep: #7c5cff;
+    --white: #f7f7fc;
+    --muted: #b0b4c9;
+    --danger: #ff6b8a;
+    --ok: #5ee0b5;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background:
+        radial-gradient(circle at top left, rgba(124, 92, 255, 0.2), transparent 30%),
+        var(--background);
+    color: var(--white);
+}
+
+.page {
+    width: min(1040px, 92%);
+    margin: 0 auto;
+    padding: 48px 0 72px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: var(--muted);
+}
+
+.composer {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px;
+    margin-bottom: 24px;
+}
+
+.composer label {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.composer-row {
+    display: flex;
+    gap: 12px;
+}
+
+.composer input {
+    flex: 1;
+    height: 52px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface-light);
+    color: var(--white);
+    padding: 0 16px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.composer button {
+    height: 52px;
+    padding: 0 22px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--purple), var(--purple-deep));
+    color: var(--white);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.boards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.board {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px;
+    min-height: 280px;
+}
+
+.board-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.board-head h2 {
+    font-size: 20px;
+}
+
+.board-head p {
+    color: var(--purple);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.task-list {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.task {
+    background: var(--surface-light);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+}
+
+.task-title {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    word-break: break-word;
+}
+
+.task.done .task-title {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.task time {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.task-actions button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #2a3150;
+    color: var(--white);
+}
+
+.task-actions .complete {
+    color: var(--ok);
+}
+
+.task-actions .delete {
+    color: var(--danger);
+}
+
+.task-edit {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    background: #171b30;
+    color: var(--white);
+    padding: 0 10px;
+    font-family: inherit;
+}
+
+.empty {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .boards {
+        grid-template-columns: 1fr;
+    }
+
+    .composer-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .composer button {
+        width: 100%;
+    }
+}

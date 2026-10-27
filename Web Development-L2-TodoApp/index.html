@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A to-do list app with pending and completed tasks, edit, delete and local storage.">
+    <title>To-Do Web App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <header class="hero">
+            <p class="eyebrow">LEVEL 2 · TASK 3</p>
+            <h1>To-Do Web App</h1>
+            <p>Add, complete, edit and delete daily tasks. Lists stay saved in this browser.</p>
+        </header>
+
+        <section class="composer">
+            <form id="task-form">
+                <label for="task-input">New task</label>
+                <div class="composer-row">
+                    <input id="task-input" type="text" placeholder="What needs to be done?" maxlength="120" autocomplete="off">
+                    <button type="submit">Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="boards">
+            <article class="board">
+                <div class="board-head">
+                    <h2>Pending Tasks</h2>
+                    <p id="pending-count">0 pending</p>
+                </div>
+                <ul id="pending-list" class="task-list"></ul>
+                <p id="pending-empty" class="empty">No pending tasks. Add one above to get started.</p>
+            </article>
+
+            <article class="board">
+                <div class="board-head">
+                    <h2>Completed Tasks</h2>
+                    <p id="completed-count">0 completed</p>
+                </div>
+                <ul id="completed-list" class="task-list"></ul>
+                <p id="completed-empty" class="empty">Nothing completed yet. Mark a task as done to see it here.</p>
+            </article>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
