@@ -1,0 +1,348 @@
+:root {
+    --cream: #f6efe2;
+    --ink: #1d2433;
+    --blue: #14213d;
+    --crimson: #1b4b8a;
+    --gold: #c9a227;
+    --leaf: #2f6f4e;
+    --muted: #5c6575;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--ink);
+    line-height: 1.7;
+    background: var(--cream);
+}
+
+h1,
+h2,
+h3,
+.quote-mark {
+    font-family: "Playfair Display", serif;
+    line-height: 1.2;
+}
+
+.wrap {
+    width: min(980px, 90%);
+    margin: 0 auto;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.6px;
+    margin-bottom: 16px;
+}
+
+.eyebrow.dark {
+    color: var(--crimson);
+}
+
+.hero {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(212, 160, 84, 0.18), transparent 28%),
+        linear-gradient(160deg, #0d1728 0%, var(--blue) 55%, #1b4b8a 140%);
+    color: var(--white);
+    padding: 72px 6% 64px;
+    overflow: hidden;
+}
+
+.hero-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-copy h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+}
+
+.tagline {
+    max-width: 460px;
+    font-size: 20px;
+    color: #f3d7c4;
+    margin-bottom: 28px;
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-meta span {
+    padding: 8px 14px;
+    border: 1px solid rgba(212, 160, 84, 0.55);
+    border-radius: 999px;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.portrait {
+    position: relative;
+    width: min(420px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portrait-frame {
+    position: relative;
+    z-index: 1;
+    padding: 14px;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(212, 160, 84, 0.85), rgba(143, 29, 44, 0.7));
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35);
+    transform: rotate(-2deg);
+}
+
+.portrait img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    border-radius: 18px;
+}
+
+.portrait figcaption {
+    position: relative;
+    z-index: 1;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #e8c9b8;
+}
+
+.bloom {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.bloom-one {
+    width: 92px;
+    height: 92px;
+    top: -18px;
+    right: -10px;
+    background: radial-gradient(circle at 30% 30%, #f2c3c8, var(--crimson) 62%, #2f6f4e 63%);
+    animation: float 5s ease-in-out infinite;
+}
+
+.bloom-two {
+    width: 64px;
+    height: 64px;
+    bottom: 70px;
+    left: -22px;
+    background: radial-gradient(circle at 30% 30%, #f6e27a, var(--gold) 60%, var(--leaf) 61%);
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+.bloom-three {
+    width: 38px;
+    height: 38px;
+    top: 42%;
+    right: -16px;
+    background: var(--leaf);
+    box-shadow: 18px -10px 0 -8px #8f1d2c;
+}
+
+.bloom-four {
+    width: 22px;
+    height: 22px;
+    top: 18px;
+    left: 18px;
+    background: var(--gold);
+}
+
+.bio {
+    background: var(--cream);
+    padding: 96px 0;
+}
+
+.bio h2,
+.timeline h2 {
+    font-size: clamp(36px, 5vw, 52px);
+    margin-bottom: 28px;
+}
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 36px;
+}
+
+.bio-grid p {
+    color: var(--muted);
+    font-size: 17px;
+}
+
+.bio-grid p:first-child::first-letter {
+    float: left;
+    font-family: "Playfair Display", serif;
+    font-size: 58px;
+    line-height: 0.8;
+    padding-right: 10px;
+    color: var(--crimson);
+}
+
+.timeline {
+    background: var(--blue);
+    color: var(--white);
+    padding: 96px 0;
+}
+
+.timeline-list {
+    list-style: none;
+    position: relative;
+    display: grid;
+    gap: 0;
+}
+
+.timeline-list::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(var(--gold), rgba(212, 160, 84, 0.15));
+}
+
+.timeline-list li {
+    position: relative;
+    padding: 0 0 28px 64px;
+}
+
+.timeline-list li::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 6px rgba(212, 160, 84, 0.18);
+}
+
+.timeline-list span {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    margin-bottom: 6px;
+}
+
+.timeline-list h3 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.timeline-list p {
+    color: #f0d9c8;
+    max-width: 560px;
+}
+
+.quote {
+    background:
+        radial-gradient(circle at top left, rgba(212, 160, 84, 0.16), transparent 30%),
+        var(--crimson);
+    padding: 90px 20px;
+}
+
+blockquote {
+    width: min(820px, 90%);
+    margin: 0 auto;
+    text-align: center;
+    color: var(--white);
+}
+
+.quote-mark {
+    display: block;
+    font-size: 92px;
+    line-height: 0.6;
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+blockquote p {
+    font-size: clamp(26px, 4.4vw, 40px);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+blockquote cite {
+    color: #f3d7c4;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.footer {
+    background: var(--blue);
+    color: #f0d9c8;
+    text-align: center;
+    padding: 28px 16px;
+    font-size: 14px;
+}
+
+.footer p + p {
+    margin-top: 6px;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 860px) {
+    .hero-inner,
+    .bio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        text-align: center;
+        padding-top: 48px;
+    }
+
+    .tagline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-meta {
+        justify-content: center;
+    }
+
+    .portrait img {
+        height: 430px;
+    }
+
+    .bio,
+    .timeline,
+    .quote {
+        padding: 64px 0;
+    }
+}
