@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert temperature values between Celsius, Fahrenheit and Kelvin.">
+    <title>Temperature Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <p class="eyebrow">WEB TOOL</p>
+            <h1>Temperature Converter</h1>
+            <p class="lead">Convert a value between Celsius, Fahrenheit and Kelvin.</p>
+
+            <form id="converter-form">
+                <label for="temp-input">Temperature value</label>
+                <input id="temp-input" type="text" inputmode="decimal" autocomplete="off" placeholder="Enter a number">
+
+                <label for="from-unit">Input unit</label>
+                <select id="from-unit">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+
+                <p id="error" class="error" role="alert"></p>
+                <button type="submit">Convert</button>
+            </form>
+
+            <div id="results" class="results hidden">
+                <article class="result-box" data-unit="C">
+                    <p class="result-label">Celsius</p>
+                    <p class="result-value" id="result-c">—</p>
+                    <p class="result-unit">°C</p>
+                </article>
+                <article class="result-box" data-unit="F">
+                    <p class="result-label">Fahrenheit</p>
+                    <p class="result-value" id="result-f">—</p>
+                    <p class="result-unit">°F</p>
+                </article>
+                <article class="result-box" data-unit="K">
+                    <p class="result-label">Kelvin</p>
+                    <p class="result-value" id="result-k">—</p>
+                    <p class="result-unit">K</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
