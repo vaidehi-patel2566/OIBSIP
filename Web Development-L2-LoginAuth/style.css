@@ -1,0 +1,175 @@
+:root {
+    --background: #0b0d18;
+    --surface: #15192c;
+    --field: #1d233b;
+    --purple: #c4b5ff;
+    --purple-deep: #7c5cff;
+    --white: #f7f7fc;
+    --muted: #b0b4c9;
+    --danger: #ff6b8a;
+    --ok: #5ee0b5;
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(124, 92, 255, 0.22), transparent 34%),
+        var(--background);
+    color: var(--white);
+}
+
+.auth-page,
+.dash-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.auth-card,
+.dash-card {
+    width: min(440px, 100%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 36px 28px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.dash-card {
+    width: min(560px, 100%);
+}
+
+.eyebrow {
+    color: var(--purple);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.lead {
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+form input {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--field);
+    color: var(--white);
+    padding: 0 14px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+form input:focus {
+    outline: 2px solid var(--purple);
+    border-color: transparent;
+}
+
+.hint {
+    margin-top: -10px;
+    margin-bottom: 16px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.form-error,
+.form-success {
+    min-height: 20px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-error {
+    color: var(--danger);
+}
+
+.form-success {
+    color: var(--ok);
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(180deg, var(--purple), var(--purple-deep));
+    color: var(--white);
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.94;
+}
+
+.switch {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.switch a {
+    color: var(--purple);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.profile {
+    background: var(--field);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.profile p + p {
+    margin-top: 8px;
+}
+
+.note {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .auth-card,
+    .dash-card {
+        padding: 28px 20px;
+    }
+}

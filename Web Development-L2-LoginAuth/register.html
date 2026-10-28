@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create an account.">
+    <title>Register | Auth System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="auth-page">
+        <section class="auth-card">
+            <p class="eyebrow">LEVEL 2 · TASK 4</p>
+            <h1>Create account</h1>
+            <p class="lead">Register with a username, email and a strong password.</p>
+
+            <form id="register-form" novalidate>
+                <label for="register-username">Username</label>
+                <input id="register-username" name="username" type="text" autocomplete="username">
+
+                <label for="register-email">Email</label>
+                <input id="register-email" name="email" type="email" autocomplete="email">
+
+                <label for="register-password">Password</label>
+                <input id="register-password" name="password" type="password" autocomplete="new-password">
+                <p class="hint">Minimum 8 characters and at least 1 number.</p>
+
+                <p id="register-error" class="form-error" role="alert"></p>
+                <p id="register-success" class="form-success"></p>
+                <button type="submit">Register</button>
+            </form>
+
+            <p class="switch">Already registered? <a href="index.html">Login</a></p>
+        </section>
+    </main>
+    <script src="auth.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
