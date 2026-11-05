@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vela business card</title>
+<style>
+@font-face { font-family: Syne; src: url("../fonts/Syne.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: Outfit; src: url("../fonts/Outfit.ttf") format("truetype"); font-weight: 100 900; }
+@page { size: 91mm 61mm; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.card { width: 91mm; height: 61mm; overflow: hidden; page-break-after: always; position: relative; }
+.card:last-child { page-break-after: auto; }
+.front { background: #0E4D5C; color: #FFFFFF; }
+.back { background: #F4F1E8; color: #0E4D5C; }
+.pad { position: absolute; inset: 7mm; display: flex; flex-direction: column; justify-content: space-between; }
+.brandrow { display: flex; align-items: center; gap: 3.2mm; }
+.mark { width: 22mm; height: auto; display: block; }
+.back .mark { width: 15mm; }
+.word { font-family: Syne, sans-serif; font-weight: 700; font-size: 12pt; letter-spacing: 0.2em; }
+.rule { width: 12mm; height: 1.15mm; background: #E7A15A; margin-bottom: 3.2mm; }
+.name { font-family: Syne, sans-serif; font-weight: 700; font-size: 20pt; letter-spacing: -0.03em; line-height: 1; }
+.role { font-family: Outfit, sans-serif; font-weight: 500; font-size: 10pt; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 2.4mm; }
+.contacts { display: flex; flex-direction: column; gap: 3.4mm; }
+.contacts p { display: grid; grid-template-columns: 22mm 1fr; gap: 3mm; align-items: baseline; font-family: Outfit, sans-serif; font-size: 11pt; font-weight: 500; line-height: 1.2; }
+.contacts span { font-family: Outfit, sans-serif; font-size: 8pt; font-weight: 650; letter-spacing: 0.14em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<section class="card front">
+  <div class="pad">
+    <div class="brandrow">
+      <svg class="mark" viewBox="180 150 660 450" aria-hidden="true">
+        <defs>
+          <clipPath id="sky-front"><rect width="1000" height="536"/></clipPath>
+        </defs>
+        <circle cx="632" cy="454" r="100" fill="#E7A15A" clip-path="url(#sky-front)"/>
+        <path d="M196 536 H804" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round"/>
+        <path d="M328 186 L268 550 L468 550 Q548 346 328 186 Z" fill="#FFFFFF"/>
+      </svg>
+      <p class="word">VELA</p>
+    </div>
+    <div>
+      <div class="rule"></div>
+      <h1 class="name">Mara Ellison</h1>
+      <p class="role">Founder</p>
+    </div>
+  </div>
+</section>
+<section class="card back">
+  <div class="pad">
+    <div class="brandrow">
+      <svg class="mark" viewBox="180 150 660 450" aria-hidden="true">
+        <defs>
+          <clipPath id="sky-back"><rect width="1000" height="536"/></clipPath>
+        </defs>
+        <circle cx="632" cy="454" r="100" fill="#E7A15A" clip-path="url(#sky-back)"/>
+        <path d="M196 536 H804" fill="none" stroke="#0E4D5C" stroke-width="22" stroke-linecap="round"/>
+        <path d="M328 186 L268 550 L468 550 Q548 346 328 186 Z" fill="#0E4D5C"/>
+      </svg>
+      <p class="word">VELA</p>
+    </div>
+    <div class="contacts">
+      <p><span>Phone</span>+44 1736 418 209</p>
+      <p><span>Email</span>mara@velaswim.club</p>
+      <p><span>Web</span>velaswim.club</p>
+      <p><span>Social</span>Instagram @velaswim</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <style>
+    @font-face { font-family: Syne; src: url("../fonts/Syne.ttf") format("truetype"); font-weight: 100 900; }
+    @font-face { font-family: Outfit; src: url("../fonts/Outfit.ttf") format("truetype"); font-weight: 100 900; }
+  </style>
+  <defs>
+    <clipPath id="sky">
+      <rect width="1000" height="536"/>
+    </clipPath>
+  </defs>
+  <rect width="1000" height="1000" fill="#0E4D5C"/>
+  <circle cx="632" cy="454" r="100" fill="#FFFFFF" clip-path="url(#sky)"/>
+  <path d="M196 536 H804" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round"/>
+  <path d="M328 186 L268 550 L468 550 Q548 346 328 186 Z" fill="#FFFFFF"/>
+  <text x="500" y="706" text-anchor="middle" fill="#FFFFFF" font-family="Syne" font-weight="700" font-size="124" letter-spacing="22">VELA</text>
+  <text x="500" y="776" text-anchor="middle" fill="#FFFFFF" font-family="Outfit" font-weight="560" font-size="28" letter-spacing="10">SWIM CLUB</text>
+</svg>

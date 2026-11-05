@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Vela Journal — Issue 01, First Light</title>
+<style>
+@font-face { font-family: Syne; src: url("../fonts/Syne.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: Outfit; src: url("../fonts/Outfit.ttf") format("truetype"); font-weight: 100 900; }
+@page { size: A4; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; background: #F4F1E8; color: #0E4D5C; }
+.page:last-child { page-break-after: auto; }
+.bleed { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,77,92,0.92) 0%, rgba(14,77,92,0.55) 26%, rgba(14,77,92,0) 50%), linear-gradient(to bottom, rgba(14,77,92,0.55) 0%, rgba(14,77,92,0) 18%); }
+.head, .foot { position: absolute; left: 14mm; right: 14mm; display: flex; justify-content: space-between; align-items: baseline; font-family: Outfit, sans-serif; font-weight: 600; font-size: 9pt; letter-spacing: 0.16em; text-transform: uppercase; }
+.head { top: 11mm; }
+.foot { bottom: 9mm; }
+.light { color: #FFFFFF; }
+.photo .head, .photo .foot { color: #FFFFFF; }
+.content { position: absolute; top: 24mm; left: 14mm; right: 14mm; bottom: 20mm; }
+.kicker { font-family: Outfit, sans-serif; font-weight: 650; font-size: 10pt; letter-spacing: 0.16em; text-transform: uppercase; }
+h1 { font-family: Syne, sans-serif; font-weight: 750; font-size: 32pt; line-height: 0.98; letter-spacing: -0.035em; margin-top: 3mm; }
+.deck { font-family: Outfit, sans-serif; font-weight: 450; font-size: 12pt; line-height: 1.4; margin-top: 4mm; max-width: 150mm; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; margin-top: 8mm; }
+.body { font-family: Outfit, sans-serif; font-weight: 430; font-size: 11pt; line-height: 1.5; }
+.body p + p { margin-top: 3.4mm; }
+.pull { margin: 5mm 0 1mm; padding: 1mm 0 1mm 4mm; border-left: 1.5mm solid #E7A15A; font-family: Syne, sans-serif; font-weight: 700; font-size: 16pt; line-height: 1.2; letter-spacing: -0.03em; }
+.cover-copy { position: absolute; left: 14mm; right: 18mm; bottom: 24mm; color: #FFFFFF; }
+.cover-copy .mark { width: 34mm; height: auto; display: block; margin-bottom: 6mm; }
+.cover-copy h1 { font-size: 52pt; margin-top: 2mm; }
+.cover-copy .deck { color: #FFFFFF; font-size: 13pt; max-width: 120mm; }
+.caption { position: absolute; left: 14mm; right: 20mm; bottom: 22mm; color: #FFFFFF; }
+.caption h2 { font-family: Syne, sans-serif; font-weight: 750; font-size: 28pt; line-height: 1.02; letter-spacing: -0.03em; max-width: 130mm; }
+.caption p { font-family: Outfit, sans-serif; font-weight: 450; font-size: 12pt; line-height: 1.4; margin-top: 4mm; max-width: 115mm; }
+.steps { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; row-gap: 7mm; margin-top: 8mm; }
+.steps h3 { font-family: Syne, sans-serif; font-weight: 700; font-size: 16pt; letter-spacing: -0.03em; margin-top: 1mm; }
+.num { font-family: Syne, sans-serif; font-weight: 700; font-size: 12pt; letter-spacing: 0.08em; }
+.steps .body { margin-top: 2mm; }
+.signoff { position: absolute; left: 14mm; right: 14mm; bottom: 20mm; border-top: 0.35mm solid #0E4D5C; padding-top: 4mm; font-family: Syne, sans-serif; font-weight: 700; font-size: 14pt; line-height: 1.3; letter-spacing: -0.02em; }
+.credit { position: absolute; left: 14mm; bottom: 15mm; font-family: Outfit, sans-serif; font-size: 8pt; letter-spacing: 0.04em; color: #FFFFFF; }
+</style>
+</head>
+<body>
+<section class="page photo">
+  <img class="bleed" src="images/cover.jpg" alt="">
+  <div class="shade"></div>
+  <header class="head light"><span>Vela Journal</span><span>Issue 01</span></header>
+  <div class="cover-copy">
+    <svg class="mark" viewBox="180 150 660 450" aria-hidden="true">
+      <defs><clipPath id="sky-c"><rect width="1000" height="536"/></clipPath></defs>
+      <circle cx="632" cy="454" r="100" fill="#E7A15A" clip-path="url(#sky-c)"/>
+      <path d="M196 536 H804" fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round"/>
+      <path d="M328 186 L268 550 L468 550 Q548 346 328 186 Z" fill="#FFFFFF"/>
+    </svg>
+    <p class="kicker">First Light</p>
+    <h1>The hour before the town.</h1>
+    <p class="deck">Issue 01 of the journal for Vela Swim Club, St Ives.</p>
+  </div>
+  <p class="credit">Photograph via Unsplash</p>
+  <footer class="foot"><span>Vela Journal</span><span>01</span></footer>
+</section>
+
+<section class="page">
+  <header class="head"><span>Vela Journal</span><span>Issue 01</span></header>
+  <div class="content">
+    <p class="kicker">From the founder</p>
+    <h1>The harbour is still dark.</h1>
+    <p class="deck">Mara Ellison on why the club meets before the town does.</p>
+    <div class="cols">
+      <div class="body">
+        <p>Vela started as four people and a thermos on the slipway. We still meet there, twenty minutes before sunrise, and we still leave the watch in the bag.</p>
+        <p>The swim is short on purpose. Out to the first buoy and back, then the steps. Nobody is training for a clock. The point is to be in the water while the light changes, and to get out while you still want to stay.</p>
+        <blockquote class="pull">We do not race the sun. We meet it.</blockquote>
+      </div>
+      <div class="body">
+        <p>New swimmers come with a guide for the first month. We talk about the exit before we talk about the entry. If the sea is up, we walk. That rule has never been put to a vote.</p>
+        <p>Afterwards there is coffee at the top of the slip, and then the day. The club exists for that order of things: water, then warmth, then whatever you were going to do anyway.</p>
+        <p>If you want the hour, write to mara@velaswim.club. Bring a towel you do not mind the sand on.</p>
+      </div>
+    </div>
+  </div>
+  <footer class="foot"><span>First Light</span><span>02</span></footer>
+</section>
+
+<section class="page photo">
+  <img class="bleed" src="images/coast.jpg" alt="">
+  <div class="shade"></div>
+  <header class="head"><span>Vela Journal</span><span>Issue 01</span></header>
+  <div class="caption">
+    <p class="kicker">The line</p>
+    <h2>Stay where you can still see the steps.</h2>
+    <p>From above, the coast is a clean edge. In the water it is not. The swim ends where the exit is obvious.</p>
+  </div>
+  <p class="credit">Photograph via Unsplash</p>
+  <footer class="foot"><span>Vela Journal</span><span>03</span></footer>
+</section>
+
+<section class="page">
+  <header class="head"><span>Vela Journal</span><span>Issue 01</span></header>
+  <div class="content">
+    <p class="kicker">The hour</p>
+    <h1>How a dawn swim is built.</h1>
+    <p class="deck">Four parts, always in this order. Skipping one is how a short swim gets long.</p>
+    <div class="steps">
+      <article>
+        <p class="num">01</p>
+        <h3>Meet</h3>
+        <p class="body">The slipway, twenty minutes before sunrise. Hats on. Names said out loud, so we know who is in.</p>
+      </article>
+      <article>
+        <p class="num">02</p>
+        <h3>Read</h3>
+        <p class="body">Look at the exit first. If the steps look wrong, or the set is up, the swim becomes a walk. No one argues.</p>
+      </article>
+      <article>
+        <p class="num">03</p>
+        <h3>Swim</h3>
+        <p class="body">Out to the first buoy and back. Stay where you can see the steps. The buoy is a marker, not a dare.</p>
+      </article>
+      <article>
+        <p class="num">04</p>
+        <h3>Warm</h3>
+        <p class="body">Dry clothes before conversation. Coffee after both. The hour is over when you are warm, not when you are tired.</p>
+      </article>
+    </div>
+  </div>
+  <p class="signoff">Membership is a conversation, not a form. Write to mara@velaswim.club, or stand with us on a Saturday before you decide.</p>
+  <footer class="foot"><span>First Light</span><span>04</span></footer>
+</section>
+</body>
+</html>
