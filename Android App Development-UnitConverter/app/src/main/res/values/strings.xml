@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="title">Unit Converter</string>
+    <string name="subtitle">Convert length, weight, and temperature.</string>
+    <string name="label_category">Category</string>
+    <string name="label_value">Value</string>
+    <string name="label_from">From</string>
+    <string name="label_to">To</string>
+    <string name="hint_value">Enter a number</string>
+    <string name="convert">Convert</string>
+    <string name="result_label">Result</string>
+    <string name="result_placeholder">Converted value will appear here</string>
+    <string name="error_empty">Enter a value to convert</string>
+    <string name="error_number">Enter a valid number</string>
+</resources>

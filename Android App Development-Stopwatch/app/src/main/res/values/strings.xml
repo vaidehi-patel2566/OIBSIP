@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stopwatch</string>
+    <string name="title">Stopwatch</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="reset">Reset</string>
+    <string name="lap">Lap</string>
+    <string name="zero_time">00:00:00.00</string>
+    <string name="empty_laps">Laps will appear here</string>
+    <string name="lap_label">Lap %1$d    %2$s</string>
+</resources>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/expressionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:minHeight="28dp"
+        android:textColor="@color/expression"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/displayView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="monospace"
+        android:gravity="end"
+        android:maxLines="2"
+        android:minHeight="84dp"
+        android:text="@string/key_0"
+        android:textColor="@color/display"
+        android:textSize="48sp" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:alignmentMode="alignBounds"
+        app:columnCount="4"
+        app:rowCount="5">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyClear"
+            style="@style/CalcKeyMuted"
+            android:tag="C"
+            android:text="@string/clear"
+            app:layout_columnSpan="2"
+            app:layout_columnWeight="2"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyBack"
+            style="@style/CalcKeyMuted"
+            android:tag="B"
+            android:text="@string/backspace"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyDivide"
+            style="@style/CalcKeyOperator"
+            android:tag="÷"
+            android:text="@string/divide"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key7"
+            style="@style/CalcKey"
+            android:tag="7"
+            android:text="@string/key_7"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key8"
+            style="@style/CalcKey"
+            android:tag="8"
+            android:text="@string/key_8"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key9"
+            style="@style/CalcKey"
+            android:tag="9"
+            android:text="@string/key_9"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyMultiply"
+            style="@style/CalcKeyOperator"
+            android:tag="×"
+            android:text="@string/multiply"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key4"
+            style="@style/CalcKey"
+            android:tag="4"
+            android:text="@string/key_4"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key5"
+            style="@style/CalcKey"
+            android:tag="5"
+            android:text="@string/key_5"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key6"
+            style="@style/CalcKey"
+            android:tag="6"
+            android:text="@string/key_6"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyMinus"
+            style="@style/CalcKeyOperator"
+            android:tag="−"
+            android:text="@string/subtract"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key1"
+            style="@style/CalcKey"
+            android:tag="1"
+            android:text="@string/key_1"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key2"
+            style="@style/CalcKey"
+            android:tag="2"
+            android:text="@string/key_2"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key3"
+            style="@style/CalcKey"
+            android:tag="3"
+            android:text="@string/key_3"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyPlus"
+            style="@style/CalcKeyOperator"
+            android:tag="+"
+            android:text="@string/add"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/key0"
+            style="@style/CalcKey"
+            android:tag="0"
+            android:text="@string/key_0"
+            app:layout_columnSpan="2"
+            app:layout_columnWeight="2"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyDot"
+            style="@style/CalcKey"
+            android:tag="."
+            android:text="@string/decimal"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/keyEquals"
+            style="@style/CalcKeyEquals"
+            android:tag="="
+            android:text="@string/equals"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_rowWeight="1" />
+    </androidx.gridlayout.widget.GridLayout>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Calculator" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/key_operator</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="CalcKey">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:background">@drawable/bg_key_number</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/key_text</item>
+        <item name="android:textSize">24sp</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="CalcKeyMuted" parent="CalcKey">
+        <item name="android:background">@drawable/bg_key_muted</item>
+    </style>
+
+    <style name="CalcKeyOperator" parent="CalcKey">
+        <item name="android:background">@drawable/bg_key_operator</item>
+        <item name="android:textColor">@color/key_text_dark</item>
+    </style>
+
+    <style name="CalcKeyEquals" parent="CalcKey">
+        <item name="android:background">@drawable/bg_key_equals</item>
+        <item name="android:textColor">@color/key_text_dark</item>
+    </style>
+</resources>

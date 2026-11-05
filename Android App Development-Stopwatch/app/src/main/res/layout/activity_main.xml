@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textColor="@color/muted"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_time"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:minHeight="140dp"
+        android:padding="20dp"
+        android:text="@string/zero_time"
+        android:textColor="@color/time"
+        android:textSize="46sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startButton"
+            style="@style/WatchButton"
+            android:background="@drawable/bg_start"
+            android:text="@string/start"
+            android:textColor="@color/text_start" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pauseButton"
+            style="@style/WatchButton"
+            android:background="@drawable/bg_pause"
+            android:text="@string/pause"
+            android:textColor="@color/text_pause" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lapButton"
+            style="@style/WatchButton"
+            android:background="@drawable/bg_lap"
+            android:text="@string/lap"
+            android:textColor="@color/text_lap" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/resetButton"
+            style="@style/WatchButton"
+            android:background="@drawable/bg_reset"
+            android:text="@string/reset"
+            android:textColor="@color/text_reset" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/empty_laps"
+        android:textColor="@color/muted"
+        android:textSize="15sp" />
+
+    <ListView
+        android:id="@+id/lapList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:scrollbars="vertical" />
+</LinearLayout>
