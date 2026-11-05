@@ -1,0 +1,9 @@
+{
+  "custom": [
+    {
+      "phrase": "open youtube",
+      "type": "url",
+      "value": "https://www.youtube.com"
+    }
+  ]
+}
